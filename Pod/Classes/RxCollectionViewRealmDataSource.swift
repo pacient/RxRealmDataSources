@@ -68,9 +68,7 @@ import RxRealm
         private let fromRow = {(row: Int) in return IndexPath(row: row, section: 0)}
 
         func applyChanges(items: AnyRealmCollection<E>, changes: RealmChangeset?) {
-            if self.items == nil {
-                self.items = items
-            }
+            self.items = items
 
         guard let collectionView = collectionView else {
             fatalError("You have to bind a collection view to the data source.")
@@ -173,9 +171,7 @@ import Cocoa
         private let fromRow = {(row: Int) in return IndexPath(item: row, section: 0)}
 
         func applyChanges(items: AnyRealmCollection<E>, changes: RealmChangeset?) {
-            if self.items == nil {
-                self.items = items
-            }
+            self.items = items
 
             guard let collectionView = collectionView else {
                 fatalError("You have to bind a collection view to the data source.")
